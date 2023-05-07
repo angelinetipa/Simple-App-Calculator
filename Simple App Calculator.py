@@ -3,13 +3,15 @@ try:
     # input for math operation
     math_operation = input("Addition Subtraction Multiplication Division \nWhat math operation would you like to use?  ").strip().lower()
     # input for two numbers
-    first_number, second_number = input("Enter your two numbers: ").split()
+    first_number, second_number = input("Enter your two numbers(add space between them): ").split()
     # if math operation is addtion, then add the two numbers
     if math_operation == "addition":
-        print(f"{first_number} + {second_number} = ", int(first_number) + int(second_number))
-# if math operation is subtraction, then subtract the two numbers
-# if math operation is multiplication, then multiply the two numbers
-# if math operation is division, then divide the two numners
+        print(f"{first_number} + {second_number} = ", float(first_number) + float(second_number))
+    # if math operation is subtraction, then subtract the two numbers
+    if math_operation == "subtraction":
+        print(f"{first_number} - {second_number} = ", float(first_number) - float(second_number))
+    # if math operation is multiplication, then multiply the two numbers
+    # if math operation is division, then divide the two numners
 except SyntaxError:
     print("Something is wrong with syntax")
 except ZeroDivisionError:
