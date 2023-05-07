@@ -4,16 +4,18 @@ try:
     math_operation = input("Addition Subtraction Multiplication Division \nWhat math operation would you like to use?  ").strip().lower()
     # input for two numbers
     first_number, second_number = input("Enter your two numbers(add space between them): ").split()
-    # if math operation is addtion, then add the two numbers
+    # if math operation is addtion, output sum of two numbers
     if math_operation == "addition":
         print(f"{first_number} + {second_number} = ", float(first_number) + float(second_number))
-    # if math operation is subtraction, then subtract the two numbers
+    # if math operation is subtraction, output difference of two numbers
     if math_operation == "subtraction":
         print(f"{first_number} - {second_number} = ", float(first_number) - float(second_number))
-    # if math operation is multiplication, then multiply the two numbers
+    # if math operation is multiplication, output product of two numbers
     if math_operation == "multiplication":
         print(f"{first_number} x {second_number} = ", float(first_number) * float(second_number))
-    # if math operation is division, then divide the two numners
+    # if math operation is division, output quotient of two numbers
+    if math_operation == "division":
+        print(f"{first_number} / {second_number} = ", float(first_number) / float(second_number))
 except SyntaxError:
     print("Something is wrong with syntax")
 except ZeroDivisionError:
