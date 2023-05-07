@@ -1,9 +1,8 @@
 # import time, os, colorama module
 import time, os
 from colorama import Fore, Back, Style, init
+# to turn off color changes at the end of every print
 init(autoreset=True)
-
-
 # use try catch
 try:
     # while try again is not no, repeat Step 1 
@@ -13,7 +12,7 @@ try:
         # input for math operation
         math_operation = input(f" \n{Fore.MAGENTA}{Style.BRIGHT}>>>  Addition {Fore.GREEN}Subtraction {Fore.YELLOW}Multiplication {Fore.CYAN}Division  <<<\n{Style.RESET_ALL}{Style.BRIGHT}What math operation would you like to use?  {Style.RESET_ALL}").strip().lower()
         # input for two numbers
-        first_number, second_number = input(f"{Style.BRIGHT}Enter your two numbers(add space between them): {Style.RESET_ALL}").split()
+        first_number, second_number = input(f"{Style.BRIGHT}Enter your two numbers(add space between them):  {Style.RESET_ALL}").split()
         # if math operation is addtion, output sum of two numbers
         if math_operation == "addition":
             print (f"{Fore.MAGENTA}{first_number} + {second_number} = ", float(first_number) + float(second_number))
@@ -38,13 +37,13 @@ try:
     print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}   🌟  S I M P L E     A P P     C A L C U L A T O R  🌟   {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
     
 except SyntaxError:
-    print(f"{Fore.RED}Something is wrong with syntax")
+    print(f"{Fore.RED}Something is wrong with syntax.")
 except ZeroDivisionError:
     print(f"{Fore.RED}Something is wrong with division. You are dividing by zero!")
 except ValueError:
-    print(f"{Fore.RED}Something is wrong with printing value")
+    print(f"{Fore.RED}Something value is invalid for a given operation.")
 except:
-    print(f"{Fore.RED}Unkown Exception")
+    print(f"{Fore.RED}Unkown Exception.")
 # exit program
 finally:
     print(f"{Style.BRIGHT}Bye Bye!")
