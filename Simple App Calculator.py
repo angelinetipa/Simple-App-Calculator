@@ -9,7 +9,7 @@ try:
     # while try again is not no, repeat Step 1 
     try_again = ""
     while try_again != "no":
-        print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}   🌟  S I M P L E     A P P     C A L C U L A T O R  🌟  {Style.RESET_ALL}")
+        print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}   🌟  S I M P L E     A P P     C A L C U L A T O R  🌟   {Style.RESET_ALL}")
         # input for math operation
         math_operation = input(f" \n{Fore.MAGENTA}{Style.BRIGHT}>>>  Addition {Fore.GREEN}Subtraction {Fore.YELLOW}Multiplication {Fore.CYAN}Division  <<<\n{Style.RESET_ALL}{Style.BRIGHT}What math operation would you like to use?  {Style.RESET_ALL}").strip().lower()
         # input for two numbers
@@ -35,7 +35,7 @@ try:
         time.sleep(0.5)
         os.system("cls")
     # else, display "Thank you"
-    print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}   🌟  S I M P L E     A P P     C A L C U L A T O R  🌟  {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
+    print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}   🌟  S I M P L E     A P P     C A L C U L A T O R  🌟   {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
     
 except SyntaxError:
     print(f"{Fore.RED}Something is wrong with syntax")
