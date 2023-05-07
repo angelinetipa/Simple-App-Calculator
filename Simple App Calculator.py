@@ -11,11 +11,13 @@ try:
     if math_operation == "subtraction":
         print(f"{first_number} - {second_number} = ", float(first_number) - float(second_number))
     # if math operation is multiplication, then multiply the two numbers
+    if math_operation == "multiplication":
+        print(f"{first_number} x {second_number} = ", float(first_number) * float(second_number))
     # if math operation is division, then divide the two numners
 except SyntaxError:
     print("Something is wrong with syntax")
 except ZeroDivisionError:
-    print("Something is wrong with division")
+    print("Something is wrong with division. You are dividing by zero!")
 except ValueError:
     print("Something is wrong with printing value")
 
