@@ -1,3 +1,5 @@
+import time, os
+
 # use try catch
 try:
     # while try again is not no, repeat Step 1 
@@ -21,7 +23,9 @@ try:
             print(f"{first_number} / {second_number} = ", float(first_number) / float(second_number))
         # input for try again
         try_again = input("Do you want to try again?  ").strip().lower()
-        # else, display "Thank you"
+        time.sleep(2)
+        os.system("cls")
+    # else, display "Thank you"
     print("Thank you for using my Simple App Calculator!")
 except SyntaxError:
     print("Something is wrong with syntax")
