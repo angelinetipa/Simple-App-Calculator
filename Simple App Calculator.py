@@ -1,10 +1,11 @@
-# import time, os, colorama module
+# import time, os module
 import time, os
 from colorama import Fore, Back, Style, init
 # to turn off color changes at the end of every print
 init(autoreset=True)
-# use try catch
-try:
+
+# def to call calculator
+def calculator():
     # while try again is not no, repeat Step 1 
     try_again = ""
     while try_again != "no":
@@ -35,21 +36,39 @@ try:
         try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again?😁  {Style.RESET_ALL}").strip().lower()
         # clear terminal
         time.sleep(0.5)
-        os.system("cls")        
+        os.system("cls")
+                
     # else, display "Thank you"
     print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
+    
+# use try catch
+try:
+    #call calculator
+    calculator()
 # exception for syntax error
 except SyntaxError:
     print(f"{Fore.RED}Something is wrong with syntax.Try Again.")
+    time.sleep(3)
+    #call calculator to repeat the process
+    calculator()
 # exception for zero division error
 except ZeroDivisionError:
     print(f"{Fore.RED}Something is wrong with division. You are dividing by zero! Try Again.")
+    time.sleep(3)
+    #call calculator to repeat the process
+    calculator()
 # exception for value error
 except ValueError:
     print(f"{Fore.RED}Some value is invalid for a given operation. Try Again.")
+    time.sleep(3)
+    #call calculator to repeat the process
+    calculator()
 # exception for value error
 except:
     print(f"{Fore.RED}Unkown Exception. Try Again.")
+    time.sleep(3)
+    #call calculator to repeat the process
+    calculator()
 # exit program
 finally:
     print(f"{Style.BRIGHT}Bye Bye!")
