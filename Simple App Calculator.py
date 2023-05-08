@@ -47,28 +47,36 @@ try:
     calculator()
 # exception for syntax error
 except SyntaxError:
-    print(f"{Fore.RED}Something is wrong with syntax.Try Again.")
+    print(f"{Fore.RED}Something is wrong with syntax.")
     time.sleep(3)
-    #call calculator to repeat the process
-    calculator()
+    try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again?😁  {Style.RESET_ALL}").strip().lower()
+    if try_again == "yes":
+        #call calculator to repeat the process
+        calculator()
 # exception for zero division error
 except ZeroDivisionError:
     print(f"{Fore.RED}Something is wrong with division. You are dividing by zero! Try Again.")
     time.sleep(3)
-    #call calculator to repeat the process
-    calculator()
+    try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again?😁  {Style.RESET_ALL}").strip().lower()
+    if try_again == "yes":
+        #call calculator to repeat the process
+        calculator()
 # exception for value error
 except ValueError:
     print(f"{Fore.RED}Some value is invalid for a given operation. Try Again.")
     time.sleep(3)
-    #call calculator to repeat the process
-    calculator()
+    try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again?😁  {Style.RESET_ALL}").strip().lower()
+    if try_again == "yes":
+        #call calculator to repeat the process
+        calculator()
 # exception for value error
 except:
     print(f"{Fore.RED}Unkown Exception. Try Again.")
     time.sleep(3)
-    #call calculator to repeat the process
-    calculator()
+    try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again?😁  {Style.RESET_ALL}").strip().lower()
+    if try_again == "yes":
+        #call calculator to repeat the process
+        calculator()
 # exit program
 finally:
     print(f"{Style.BRIGHT}Bye Bye!")
