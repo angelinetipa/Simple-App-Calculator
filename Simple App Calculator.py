@@ -37,8 +37,8 @@ def calculator():
         # clear terminal
         time.sleep(0.5)
         os.system("cls")
-        # else, display "Thank you"
-        print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
+    # else, display "Thank you"
+    print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
     
 # use try catch
 try:
@@ -47,46 +47,50 @@ try:
 # exception for syntax error
 except SyntaxError:
     print(f"{Fore.RED}Something is wrong with syntax.")
-    time.sleep(2.5)
+    time.sleep(2)
+    # option to try again
     try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again (yes/no)?😁  {Style.RESET_ALL}").strip().lower()
     if try_again == "yes":
+        os.system("cls")
         #call calculator to repeat the process
         calculator()
     # last message
-    os.system("cls")
     print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
 # exception for zero division error
 except ZeroDivisionError:
     print(f"{Fore.RED}Something is wrong with division. You are dividing by zero!")
-    time.sleep(2.5)
+    time.sleep(2)
+    # option to try again
     try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again (yes/no)?😁  {Style.RESET_ALL}").strip().lower()
     if try_again == "yes":
+        os.system("cls") 
         #call calculator to repeat the process
         calculator()
     # last message
-    os.system("cls")
     print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
 # exception for value error
 except ValueError:
     print(f"{Fore.RED}Some value is invalid for a given operation.")
-    time.sleep(2.5)
+    time.sleep(2)
+    # option to try again
     try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again (yes/no)?😁  {Style.RESET_ALL}").strip().lower()
     if try_again == "yes":
+        os.system("cls")
         #call calculator to repeat the process
         calculator()
     # last message
-    os.system("cls")
     print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
 # exception for value error
 except:
     print(f"{Fore.RED}Unkown Exception. ")
-    time.sleep(2.5)
+    time.sleep(2)
+    # option to try again
     try_again = input(f"{Style.RESET_ALL}{Style.BRIGHT}Do you want to try again (yes/no)?😁  {Style.RESET_ALL}").strip().lower()
     if try_again == "yes":
+        os.system("cls")
         #call calculator to repeat the process
         calculator()
     # last message
-    os.system("cls")
     print(f"{Fore.BLACK}{Back.WHITE}{Style.BRIGHT}➕ ➖ ✖ ➗   S I M P L E     A P P     C A L C U L A T O R   ➗ ✖ ➖ ➕ {Style.RESET_ALL}\n{Style.BRIGHT}Thank you for using my Simple App Calculator! ♥")
 # exit program
 finally:
